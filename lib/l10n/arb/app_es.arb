@@ -1,0 +1,7 @@
+{
+    "@@locale": "es",
+    "appBarTitle": "Oh My Cat!",
+    "loginTextFieldUserName": "Nombre de usuario",
+    "loginTextFieldPassword": "Cotraseña",
+    "loginButton": "Acceder"
+}
