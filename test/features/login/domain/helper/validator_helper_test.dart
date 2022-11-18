@@ -16,4 +16,26 @@ void main() {
       expect(result, false);
     },
   );
+
+  test(
+    'invalid pattern 2',
+    () {
+      const input = invalidPassword2;
+
+      final result = evaluateParenthesis(input);
+
+      expect(result, false);
+    },
+  );
+
+  test(
+    'valid pattern with non-parenthesis',
+    () {
+      const input = validPassword;
+
+      final result = evaluateParenthesis(input);
+
+      expect(result, true);
+    },
+  );
 }
