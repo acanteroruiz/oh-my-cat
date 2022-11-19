@@ -29,7 +29,6 @@ void main() {
       await $(RandomCatPage).waitUntilVisible();
 
       await $(SuccessImage).waitUntilVisible();
-      await Future<void>.delayed(const Duration(seconds: 2));
     },
   );
 }
