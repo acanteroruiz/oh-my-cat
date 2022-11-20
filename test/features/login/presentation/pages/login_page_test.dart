@@ -46,11 +46,11 @@ void main() {
         ),
       );
 
-      final appBar = find.byType(AppBar);
-      expect(appBar, findsOneWidget);
+      /* final appBar = find.byType(AppBar);
+      expect(appBar, findsOneWidget);*/
 
-      final appBarText = find.text('Oh My Cat!');
-      expect(appBarText, findsOneWidget);
+      /* final appBarText = find.text('Oh My Cat!');
+      expect(appBarText, findsOneWidget);*/
 
       final userNameTextField = find.byType(UsernameTextField);
       expect(userNameTextField, findsOneWidget);
