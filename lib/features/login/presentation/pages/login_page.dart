@@ -24,15 +24,16 @@ class LoginView extends StatelessWidget {
     final l10n = context.l10n;
     final loginState = context.watch<LoginBloc>().state;
     return Scaffold(
-      appBar: AppBar(
-        title: Text(l10n.appBarTitle),
-      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset('assets/cuatro_gatos_logo.png'),
+              const SizedBox(
+                height: 24,
+              ),
               const UsernameTextField(),
               const SizedBox(
                 height: 24,

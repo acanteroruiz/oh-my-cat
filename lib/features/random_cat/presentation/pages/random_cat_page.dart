@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:oh_my_cat/app/app.dart';
 import 'package:oh_my_cat/features/random_cat/domain/blocs/random_cat_bloc.dart';
 import 'package:oh_my_cat/features/random_cat/domain/blocs/random_cat_state.dart';
 import 'package:oh_my_cat/features/random_cat/infrastructure/repositories/api_random_cat_repository.dart.dart';
@@ -37,10 +38,26 @@ class RandomCatView extends StatelessWidget {
               child: DefaultImage(),
             );
           } else if (state is RandomCatSuccess) {
-            return Center(
-              child: SuccessImage(
-                url: state.randomCat.url,
-              ),
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  l10n.fourCatsBody,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headline5?.copyWith(
+                        color: cuatroGatosColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                Center(
+                  child: SuccessImage(
+                    url: state.randomCat.url,
+                  ),
+                ),
+              ],
             );
           }
           return const Center(
@@ -62,14 +79,13 @@ class SuccessImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text('$catHost$url'),
-        const SizedBox(height: 20),
-        Image.network(
-          '$catHost$url',
-        ),
-      ],
+    final size = MediaQuery.of(context).size;
+    return SizedBox(
+      height: size.width * .9,
+      width: size.width * .9,
+      child: Image.network(
+        '$catHost$url',
+      ),
     );
   }
 }

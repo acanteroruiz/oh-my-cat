@@ -3,5 +3,6 @@
     "appBarTitle": "Oh My Cat!",
     "loginTextFieldUserName": "Username",
     "loginTextFieldPassword": "Password",
-    "loginButton": "Login"
+    "loginButton": "Login",
+    "fourCatsBody": "Find more cats in CUATROGATOS coworking space"
 }
