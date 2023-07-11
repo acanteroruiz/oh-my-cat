@@ -19,9 +19,9 @@ void main() {
   });
 
   group('LoginPage widget', () {
-    testWidgets(
-        'has AppBar with title, UserNameTextField, PasswordTextField and LoginButton',
-        (WidgetTester tester) async {
+    testWidgets('''
+        has AppBar with title, UserNameTextField, 
+        PasswordTextField and LoginButton''', (WidgetTester tester) async {
       whenListen(
         loginBloc,
         Stream.fromIterable([
@@ -45,12 +45,6 @@ void main() {
           child: const LoginView(),
         ),
       );
-
-      /* final appBar = find.byType(AppBar);
-      expect(appBar, findsOneWidget);*/
-
-      /* final appBarText = find.text('Oh My Cat!');
-      expect(appBarText, findsOneWidget);*/
 
       final userNameTextField = find.byType(UsernameTextField);
       expect(userNameTextField, findsOneWidget);
